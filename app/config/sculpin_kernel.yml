@@ -3,7 +3,10 @@ sculpin_content_types:
         permalink: blog/:year/:month/:day/:filename/
         layout: default
     videos:
-        permalink: videos/:year/:month/:day/:filename/
+        permalink: videos/:filename
         type: path
         path: _videos
         layout: video
+        taxonomies:
+            - tags
+            - categories

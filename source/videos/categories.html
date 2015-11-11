@@ -1,0 +1,13 @@
+---
+layout: default
+title: Categories
+use:
+    - videos_categories
+---
+<h2>Categories</h2>
+
+<div>
+{% for category,videos in data.videos_categories %}
+<a href="{{ site.url }}/videos/categories/{{ category|url_encode(true) }}">{{ category }}</a>
+{% endfor %}
+</div>
